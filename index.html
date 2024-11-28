@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<base target="_top">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.loader {margin-left:45%;
+  border: 10px solid #f3f3f3;
+  border-radius: 60%;
+  border-top: 2px solid #3498db;
+  width: 200px;
+  height: 200px;
+  -webkit-animation: spin 2s linear infinite; 
+  animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.tg  {border-collapse:collapse;border-spacing:5;width:1200px;}
+.tg td{border-color:black;border-style:solid;border-width: 3px;font-family:Arial, sans-serif;font-size:14px;}
+.tg th{border-color:black;border-style:solid;border-width:3px;font-family:Arial, sans-serif;font-size:14px;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<body>
+
+<div id="lod" class="w3-modal">
+  <div class="w3-center">
+    <div class="loader"></div>
+  </div>
+</div>
+
+<?!= include('js'); ?>
+
+<div class="w3-row w3-small" style="margin-top:20px;margin-left:25%;">
+  <h4> 977-110	WEB PROGRAMMING (Grading 1/2024)</h4>
+    <form id="lab" onsubmit="event.preventDefault();subm(this)">
+      <div class="w3-col s8"><br/>
+        <input type="text"name="roll" placeholder="Enter Student ID"
+          class="w3-input w3-large w3-border w3-round-large w3-col s5" required><br/><br/><br/>
+
+        <input type="submit"class="w3-button w3-green w3-round-large w3-col s2">
+        <input type="button" name="btnprint"class="w3-button w3-red w3-round-large w3-col s2 w3-margin-left" value="Print" onclick="Print('PrintDiv')"/>
+      </div>
+    </form>
+</div>
+
+<br/><br/>
+
+<div id='PrintDiv'> 
+  <div id="rs"class="w3-margin-top" style="margin-left:2%; margin-top:2%; margin-right:2%;"></div>
+</div>
+
+</body>
+</html>
