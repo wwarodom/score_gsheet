@@ -14,8 +14,8 @@ function sub(v){
   let sheet = ss.getSheetByName("Score");
   let isFoundStudentId = 0;
    
-  let rowFirst = '<tr><th colspan=3></th>';
-  for( i=4; i<= sheet.getLastColumn(); i++) { 
+  let rowFirst = '<tr><th colspan=2></th>';
+  for( i=3; i<= sheet.getLastColumn(); i++) { 
     console.log("Data:", i, " : ", sheet.getRange(1,i).getValue() )  // all label from row 1
     rowFirst += "<th class=\"w3-center w3-indigo\">" + sheet.getRange(1,i).getValue() + "</th>"; 
   }
